@@ -13,7 +13,6 @@ public class RunEmployee{
 	        System.out.print("Employee name: ");
 	        String emp_name =input.nextLine();
 
-			int number = 0;
 			boolean isNumber;
 			
 	        
@@ -61,23 +60,19 @@ public class RunEmployee{
 	            
 	            System.out.print("Enter no. of hours worked:  ");
 	            int no_hours_work2 = input.nextInt();
-	            
-	            System.out.print("Enter no. of overtime:  ");
-	            double no_overtime = input.nextDouble();
 
                
-	            double basic_pay2 =  (rate_per_hour * no_hours_work2); 
-	            double overtime_pay = (no_overtime * rate_per_hour * .5);
-	            // double gross_pay = (basic_pay2 + overtime_pay);
-
-                emp = new PartTimeEmployee(emp_name,no_hours_work2,rate_per_hour,overtime_pay);
+	            double basic_pay2 =  (rate_per_hour * no_hours_work2);
+				 
+	           
+                PartTimeEmployee pte = new PartTimeEmployee(emp_name,no_hours_work2,rate_per_hour,0);
 
 	            System.out.println("___________________________________");
-	            System.out.println("Employee Name:   " + emp.getEmp_name() );
-	            System.out.println("Basic Pay:       " + df2.format(basic_pay2));
-	            System.out.println("Overtime Pay:    " + df2.format(overtime_pay));
+	            System.out.println("Employee Name:   " + pte.getEmp_name() );
+	            System.out.println("Monthly Wage:       " + df2.format(basic_pay2));
 	            System.out.println("___________________________________");
-	            System.out.println("Wage:       " + df2.format(emp.wage()));
+				System.out.println("Deductions:" + df2.format(pte.getdeduction()));
+				System.out.println("Wage:       " + df2.format(pte.wage()));
 				System.out.println("");
 	        } 
         }	        
