@@ -24,6 +24,7 @@ public abstract class Employee {
     public abstract double monthSal();
 
 
+
     //override
     public String toString() {
 
