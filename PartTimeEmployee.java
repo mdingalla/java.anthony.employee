@@ -31,30 +31,16 @@ public class PartTimeEmployee extends Employee{
 
     
 
-    //returnSalary
+    //return Final Pay
     
     public double wage()
-    {
-        
-        
-        
-        //double overtime = 0;
-
-        //if(hoursWorked > 40){
-            //int hours = hoursWorked - 40;
-            //hoursWorked = 40;
-            //overtime = hours * (ratePerHour * .5);
-        //}
-
-        
+    { 
         double total = this.wage - this.deduction;
         return total;
-
-
     }
 
 
-    //override
+    
     public String toString() {
         return super.toString() +  String.format("%-20s %.2f%n", "Salary", wage());
     }
