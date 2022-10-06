@@ -25,7 +25,7 @@ public abstract class Employee {
 
 
 
-    //override
+    
     public String toString() {
 
         return String.format("%-20 %s&n, Employee name:", Emp_name) + String.format("%-20s %s%n", "Employee Name:", Emp_name);

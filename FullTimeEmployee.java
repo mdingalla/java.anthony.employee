@@ -27,7 +27,7 @@ public class FullTimeEmployee extends Employee{
     }
 
 
-    //override
+    
     public String toString() {
         return super.toString() + String.format("%-20s %.2f%n", "Salary", monthSal());
     }
